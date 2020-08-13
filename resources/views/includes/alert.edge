@@ -1,0 +1,27 @@
+@if(flashMessage('errors'))
+  <div class="alert alert-dismissible alert-danger">
+    <div class="close" data-dismiss="alert">&times;</div>
+      @each(error in flashMessage('errors'))
+      <div> 
+        {{ error.message }} 
+      </div>
+      @endeach      
+  </div>
+@endif
+@if(flashMessage('msg'))
+  @if(flashMessage('type') == 'success')
+    <div class="alert alert-dismissible alert-success">
+      <div class="close" data-dismiss="alert">&times;</div>
+      <div> 
+        {{ flashMessage('msg') }} 
+      </div>
+    </div>
+  @else
+    <div class="alert alert-dismissible alert-danger">
+      <div class="close" data-dismiss="alert">&times;</div>
+      <div> 
+        {{ flashMessage('msg') }} 
+      </div>
+    </div>
+  @endif
+@endif

@@ -1,0 +1,4 @@
+/node_modules
+/.vscode
+sftp-config.json
+.env
